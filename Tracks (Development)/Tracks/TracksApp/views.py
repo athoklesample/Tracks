@@ -10,12 +10,16 @@ from django.utils import timezone
 import sys
 import traceback
 
-
+# changed from index to upload
 def index(request):
     form = UploadFileForm()
     return render(request, 'TracksApp/index.html', {'form': form})
 
+def welcome(request):
+    return render(request, 'TracksApp/tracks.html',{})
 
+def SignIn(request):
+    pass
 
 def upload_MP3(request):
     #print('entered uploadmp3')

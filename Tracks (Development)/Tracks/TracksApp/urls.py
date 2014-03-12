@@ -5,6 +5,8 @@ from TracksApp import views
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
-    url(r'^upload_MP3/', views.upload_MP3, name='upload_MP3')
+    url(r'^$', views.welcome, name='welcome'),
+    url(r'^upload/',views.index, name='index'),
+    url(r'^upload_MP3/', views.upload_MP3, name='upload_MP3'),
+    url(r'^signin/', views.SignIn, name='SignIn')
 )
