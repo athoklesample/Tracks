@@ -15,11 +15,20 @@ def index(request):
     form = UploadFileForm()
     return render(request, 'TracksApp/index.html', {'form': form})
 
-def welcome(request):
+def tracks(request):
     return render(request, 'TracksApp/tracks.html',{})
 
-def SignIn(request):
-    pass
+def signIn(request):
+    if (request.method == 'GET'):
+        return render(request, 'TracksApp/welcome.html',{})
+
+def signUp(request):
+    if (request.method == 'GET'):
+        return render(request, 'TracksApp/signup.html', {})
+
+def about(request):
+    if (request.method == 'GET'):
+        return render(request, 'TracksApp/about.html', {})
 
 def upload_MP3(request):
     #print('entered uploadmp3')

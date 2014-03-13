@@ -114,7 +114,7 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates')
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
-
+print TEMPLATE_DIRS[0]
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
